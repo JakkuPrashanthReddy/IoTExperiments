@@ -1,11 +1,11 @@
-import AdaFruit_DHT
+import Adafruit_DHT
 import requests
 import time
 
 KEY = 'YOUR_API_KEY'
 url = 'https://api.thingspeak.com/update'
 def getData(sensor, pin):
-    humidity, temperature = AdaFruit_DHT.read_retry(sensor, pin)
+    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
     return humidity, temperature
 
 def pushData(temp,humi):
